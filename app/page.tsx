@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 
-import LottieAnimation from "./components/Animations/EducationAnimation";
 import TestimonialsSection from "./testimonials/page";
 import CoursesSection from "./courses/page";
 import WhyChooseUs from "./why-choose-us/page";

@@ -7,16 +7,12 @@ import {
   MapPin,
   Users,
   ChevronRight,
-  Camera,
-  Award,
   BookOpen,
   Star,
   Bookmark,
-  Flag,
   Activity,
   Music,
   Globe,
-  Heart,
 } from "lucide-react";
 
 const Events = () => {
