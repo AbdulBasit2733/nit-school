@@ -8,6 +8,7 @@ import CTA from "./cta/page";
 import FeaturedCourseSlider from "./components/FeaturedCourseSlider";
 import AboutUs from "./components/AboutUs";
 import { Atom, Book, Code, Globe, GraduationCap, MousePointerSquareDashed } from "lucide-react";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -256,9 +257,11 @@ const IslamicTechAnimation = () => {
         </motion.div>
 
         <div className="z-10 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-xl flex items-center justify-center">
-          <img
+          <Image
             src="/logo.jpg"
             alt="School Logo"
+            width={36}
+            height={36}
             className="w-36 h-36 object-cover"
           />
         </div>

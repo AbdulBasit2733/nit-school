@@ -153,7 +153,7 @@ const CTA = () => {
             viewport={{ once: true }}
             className="mt-12"
           >
-            <p className="text-blue-100 mb-6">Begin your child's journey to a balanced education today</p>
+            <p className="text-blue-100 mb-6">Begin your child&apos;s journey to a balanced education today</p>
             <div className="inline-flex items-center bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
               <input 
                 type="email" 

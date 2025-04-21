@@ -14,6 +14,7 @@ import {
   Music,
   Globe,
 } from "lucide-react";
+import Image from "next/image";
 
 const Events = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -301,9 +302,11 @@ const Events = () => {
 
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="h-64 lg:h-auto relative">
-                  <img
+                  <Image
                     src={selectedEvent.image}
                     alt={selectedEvent.title}
+                    width={100}
+                    height={100}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
@@ -435,9 +438,11 @@ const Events = () => {
                   onClick={() => setSelectedEvent(event)}
                 >
                   <div className="relative h-48">
-                    <img
+                    <Image
                       src={event.image}
                       alt={event.title}
+                      height={100}
+                      width={100}
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
@@ -526,7 +531,7 @@ const Events = () => {
                 Upcoming Featured Events
               </h2>
               <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-                Don't miss out on these exciting events happening at our school
+                Don&apos;t miss out on these exciting events happening at our school
                 in the coming months.
               </p>
             </motion.div>
@@ -575,9 +580,11 @@ const Events = () => {
                       }`}
                     >
                       <div className="md:w-2/5 h-48 md:h-auto relative">
-                        <img
+                        <Image
                           src={event.image}
                           alt={event.title}
+                          height={100}
+                          width={100}
                           className="w-full h-full object-cover"
                         />
                         <div className="absolute top-0 left-0 m-3">

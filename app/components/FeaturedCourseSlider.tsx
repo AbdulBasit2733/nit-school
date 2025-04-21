@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Clock, Star, Users, BookOpen } from "lucide-react";
+import Image from "next/image";
 
 // New Iqra Techno NIT - Sample School Programs
 const featuredCourses = [
@@ -94,9 +95,11 @@ export default function FeaturedCourseSlider() {
                 className="flex flex-col lg:flex-row bg-white dark:bg-slate-800 overflow-hidden"
               >
                 <div className="lg:w-1/2 relative">
-                  <img
+                  <Image
                     src={featuredCourses[currentIndex].image}
                     alt={featuredCourses[currentIndex].title}
+                    width={100}
+                    height={"64"}
                     className="w-full h-64 lg:h-full object-cover"
                   />
                   <div className="absolute top-4 left-4 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">

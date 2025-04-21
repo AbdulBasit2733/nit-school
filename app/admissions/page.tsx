@@ -420,7 +420,7 @@ const Admissions = () => {
                             onChange={handleChange}
                             required
                             className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="Enter student's full name"
+                            placeholder="Enter student&apos;s full name"
                           />
                         </div>
                         
@@ -436,7 +436,7 @@ const Admissions = () => {
                             onChange={handleChange}
                             required
                             className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                            placeholder="Enter parent's/guardian's name"
+                            placeholder="Enter parent&apos;s/guardian&apos;s name"
                           />
                         </div>
                       </div>
@@ -588,7 +588,7 @@ const Admissions = () => {
                           className="mt-1 mr-3"
                         />
                         <label htmlFor="agreeToTerms" className="text-sm text-slate-700 dark:text-slate-300">
-                          I confirm that the information provided is accurate and I agree to the school's 
+                          I confirm that the information provided is accurate and I agree to the school&apos;s 
                           <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline"> terms and conditions</a>.
                         </label>
                       </div>

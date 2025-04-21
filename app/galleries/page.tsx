@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CameraIcon } from "lucide-react";
+import Image from "next/image";
 // Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -52,9 +53,11 @@ const Galleries = () => {
               whileHover={{ scale: 1.05 }}
               className="relative rounded-xl overflow-hidden group aspect-square"
             >
-              <img
+              <Image
                 src={`/api/placeholder/${400 + index * 10}/${400 + index * 10}`}
                 alt={`School event ${index + 1}`}
+                width={100}
+                height={100}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">

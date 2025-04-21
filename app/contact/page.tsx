@@ -81,11 +81,11 @@ const Contact = () => {
               GET IN TOUCH
             </span>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-              We'd Love to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">Hear</span> From You
+              We&apos;d Love to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">Hear</span> From You
             </h1>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
               Have questions about our school, admissions process, or programs? Our team is here to help you. 
-              Reach out to us and we'll respond as soon as we can.
+              Reach out to us and we&apos;ll respond as soon as we can.
             </p>
           </motion.div>
           
@@ -313,7 +313,7 @@ const Contact = () => {
               Get in Touch with Us
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-              Have a question or need more information? Fill out the form below and we'll get back to you shortly.
+              Have a question or need more information? Fill out the form below and we&apos;ll get back to you shortly.
             </p>
           </motion.div>
           
@@ -517,7 +517,7 @@ const Contact = () => {
               Contact Specific Departments
             </h2>
             <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-              Need to reach a specific department? Here's how to connect with our specialized teams.
+              Need to reach a specific department? Here&apos;s how to connect with our specialized teams.
             </p>
           </motion.div>
           
