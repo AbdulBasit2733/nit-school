@@ -35,7 +35,7 @@ const Admissions = () => {
   
   const [activeStep, setActiveStep] = useState(1);
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [activeAccordion, setActiveAccordion] = useState(null);
+  const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
 
   // Animation variants
   const containerVariants = {
@@ -111,18 +111,18 @@ const Admissions = () => {
       answer: 'The primary medium of instruction is English. Arabic and Islamic Studies are also part of the curriculum in alignment with our values-based education approach.'
     }
   ];
-
+  
   // Handle input changes
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value, type } = e.target;
+    const target = e.target as HTMLInputElement;
     setFormData(prevData => ({
       ...prevData,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: type === 'checkbox' ? target.checked : value
     }));
   };
-
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
     setFormSubmitted(true);
@@ -138,7 +138,7 @@ const Admissions = () => {
   };
 
   // Toggle accordion
-  const toggleAccordion = (id) => {
+  const toggleAccordion = (id: number) => {
     setActiveAccordion(activeAccordion === id ? null : id);
   };
 
@@ -485,7 +485,7 @@ const Admissions = () => {
                           value={formData.address}
                           onChange={handleChange}
                           required
-                          rows="3"
+                          rows={3}
                           className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                           placeholder="Enter your complete address"
                         ></textarea>
@@ -559,8 +559,8 @@ const Admissions = () => {
                           id="message"
                           name="message"
                           value={formData.message}
-                          onChange={handleChange}
-                          rows="4"
+                          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => handleChange(e)}
+                          rows={4}
                           className="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                           placeholder="Any additional information you would like to share"
                         ></textarea>

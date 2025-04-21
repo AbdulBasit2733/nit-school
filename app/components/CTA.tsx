@@ -5,19 +5,19 @@ import { BookOpen, Moon, Sun, Users, GraduationCap, Heart } from 'lucide-react'
 const CTA = () => {
   return (
     <section className="py-28 relative overflow-hidden">
-      {/* Background gradient with Islamic-inspired colors */}
+      {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 to-blue-700 dark:from-emerald-900 dark:to-blue-900"></div>
-      
+
       {/* Islamic geometric pattern overlay */}
-      <div className="absolute inset-0 opacity-10 bg-[url('/api/placeholder/200/200')] bg-repeat"></div>
-      
+      <div className="absolute inset-0 opacity-10 bg-[url('https://placehold.co/600x400')] bg-repeat bg-center"></div>
+
       {/* Animated light effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/10 rounded-full mix-blend-overlay blur-xl animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-green-500/10 rounded-full mix-blend-overlay blur-xl animate-pulse animation-delay-2000"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-72 h-72 bg-blue-500/10 rounded-full mix-blend-overlay blur-xl animate-pulse animation-delay-4000"></div>
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-green-500/10 rounded-full mix-blend-overlay blur-xl animate-pulse delay-2000"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-72 h-72 bg-blue-500/10 rounded-full mix-blend-overlay blur-xl animate-pulse delay-4000"></div>
       </div>
-      
+
       {/* Decorative crescents */}
       <div className="absolute top-10 left-10 text-white/10 dark:text-white/5">
         <Moon size={120} />
@@ -25,7 +25,7 @@ const CTA = () => {
       <div className="absolute bottom-10 right-10 text-white/10 dark:text-white/5">
         <Moon size={80} />
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -34,20 +34,20 @@ const CTA = () => {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            {/* Small decorative element */}
+            {/* Decorative heading */}
             <div className="flex items-center justify-center mb-6">
               <div className="h-1 w-10 bg-emerald-400 rounded-full mx-2"></div>
               <div className="text-emerald-300 font-medium">Balance of Knowledge</div>
               <div className="h-1 w-10 bg-emerald-400 rounded-full mx-2"></div>
             </div>
-            
+
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
               Nurturing <span className="text-emerald-300">Deen</span> and <span className="text-blue-300">Duniya</span> for a Balanced Future
             </h2>
             <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
               Join our pioneering institution where students excel in both Islamic knowledge and academic studies from Jr. KG to 12th grade, preparing them for success in this world and the hereafter.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -60,7 +60,7 @@ const CTA = () => {
                   Enroll Today
                 </span>
               </motion.button>
-              
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -74,8 +74,8 @@ const CTA = () => {
               </motion.button>
             </div>
           </motion.div>
-          
-          {/* Divider with Islamic pattern */}
+
+          {/* Divider */}
           <div className="my-16 relative">
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-full h-px bg-white/20"></div>
@@ -86,25 +86,13 @@ const CTA = () => {
               </div>
             </div>
           </div>
-          
-          {/* Key benefits with glassmorphism */}
+
+          {/* Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[ 
-              { 
-                icon: <BookOpen className="text-emerald-300" />, 
-                title: "Integrated Curriculum", 
-                description: "Seamlessly blending Quranic studies with modern academics"
-              },
-              { 
-                icon: <Users className="text-blue-300" />, 
-                title: "Expert Teachers", 
-                description: "Qualified in both Islamic sciences and academic subjects"
-              },
-              { 
-                icon: <Heart className="text-pink-300" />, 
-                title: "Character Development", 
-                description: "Building future leaders with strong Islamic values"
-              }
+              { icon: <BookOpen className="text-emerald-300" />, title: "Integrated Curriculum", description: "Seamlessly blending Quranic studies with modern academics" },
+              { icon: <Users className="text-blue-300" />, title: "Expert Teachers", description: "Qualified in both Islamic sciences and academic subjects" },
+              { icon: <Heart className="text-pink-300" />, title: "Character Development", description: "Building future leaders with strong Islamic values" }
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -124,7 +112,7 @@ const CTA = () => {
               </motion.div>
             ))}
           </div>
-          
+
           {/* Trust indicators */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -144,8 +132,8 @@ const CTA = () => {
               ))}
             </div>
           </motion.div>
-          
-          {/* Final call to action */}
+
+          {/* Final CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

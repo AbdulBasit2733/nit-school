@@ -31,9 +31,8 @@ import {
 const Academics = () => {
   const [activeTab, setActiveTab] = useState("curriculum");
   const [activeAccordion, setActiveAccordion] = useState("primary");
-
-  const toggleAccordion = (id) => {
-    setActiveAccordion(activeAccordion === id ? null : id);
+  const toggleAccordion = (id: string) => {
+    setActiveAccordion(activeAccordion === id ? "" : id);
   };
 
   // Animation variants

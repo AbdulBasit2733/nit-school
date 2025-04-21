@@ -18,8 +18,8 @@ import Image from "next/image";
 
 const Events = () => {
   const [activeCategory, setActiveCategory] = useState("all");
-  const [filteredEvents, setFilteredEvents] = useState([]);
-  const [selectedEvent, setSelectedEvent] = useState(null);
+  const [filteredEvents, setFilteredEvents] = useState<typeof eventsData>([]);
+  const [selectedEvent, setSelectedEvent] = useState<typeof eventsData[0] | null>(null);
 
   // Define event categories
   const categories = [

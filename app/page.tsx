@@ -1,14 +1,15 @@
 "use client";
 import { motion } from "framer-motion";
+import { LucideIcon } from "lucide-react";
 
 import TestimonialsSection from "./testimonials/page";
 import CoursesSection from "./courses/page";
 import WhyChooseUs from "./why-choose-us/page";
-import CTA from "./cta/page";
 import FeaturedCourseSlider from "./components/FeaturedCourseSlider";
 import AboutUs from "./components/AboutUs";
 import { Atom, Book, Code, Globe, GraduationCap, MousePointerSquareDashed } from "lucide-react";
 import Image from "next/image";
+import CTA from "./components/CTA";
 
 export default function HomePage() {
   return (
@@ -20,6 +21,8 @@ export default function HomePage() {
       <CoursesSection />
       <TestimonialsSection />
       <CTA />
+      {/*
+       */}
     </>
   );
 }
@@ -193,7 +196,14 @@ const HeroSection = () => {
 };
 
 // Feature Card Component
-const FeatureCard = ({ icon: Icon, title, description, delay }) => {
+interface FeatureCardProps {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  delay: number;
+}
+
+const FeatureCard = ({ icon: Icon, title, description, delay }: FeatureCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
