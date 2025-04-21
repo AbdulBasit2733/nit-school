@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying, spotlightStories.length]);
+  }, [isAutoPlaying, spotlightStories]);
 
   // Testimonial auto-play
   useEffect(() => {
@@ -50,7 +50,7 @@ const TestimonialsSection = () => {
     );
   };
 
-  const goToSlide = (index:any) => {
+  const goToSlide = (index:number) => {
     setIsAutoPlaying(false);
     setCurrentIndex(index);
   };
